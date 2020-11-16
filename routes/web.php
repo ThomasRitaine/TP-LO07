@@ -27,3 +27,4 @@ Route::view('/','welcome');
 
 Route::get('vins', 'VinsController@index');
 Route::get('vins/create', 'VinsController@create');
+Route::post('vins', 'VinsController@store');
