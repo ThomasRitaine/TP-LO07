@@ -44,6 +44,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/vins/create">Ajouter un vin</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/middleware">Middleware</a>
+                        </li>
                     </ul>
                 </div>
             </div>
