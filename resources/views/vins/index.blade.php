@@ -21,6 +21,11 @@
             <td>{{ $unVin->degre }}</td>
             <td>
                 <a href="/vins/{{ $unVin->id }}" class="btn btn-primary">Consulter</a>
+                <form action="/vins/{{ $unVin->id }}" method="POST" style="display: inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                </form>
             <td>
         </tr>
         @endforeach
