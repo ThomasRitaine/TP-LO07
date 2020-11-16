@@ -14,6 +14,11 @@ class VinsController extends Controller
      }
 
 
+     public function create() {
+        return view('vins.create');
+    }
+
+
      private function validator() {
         return request()->validate([
             'cru' => 'required|min:1',
@@ -21,7 +26,7 @@ class VinsController extends Controller
             'degre' => 'required|numeric|min:0|max:100'
         ]);
     }
-    
+
 
     public function store() {
         $vin = Vin::create($this->validator());
