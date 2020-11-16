@@ -24,15 +24,24 @@ Route::view('/','welcome');
 
 
 /*  Routes des vins     */
-
+/*
 Route::get('vins', 'VinsController@index');
 Route::get('vins/create', 'VinsController@create');
 Route::post('vins', 'VinsController@store');
 Route::get('vins/{vin}', 'VinsController@show');
 Route::delete('vins/{vin}', 'VinsController@destroy');
+Route::get('vins/{vin}/edit', 'VinsController@edit');
+Route::patch('vins/{vin}', 'VinsController@update');
+*/
+
+Route::resource('vins', 'VinsController');
 
 
 
 /*  Route du middleware     */
-
 Route::view('/middleware', 'middleware')->middleware('TP');
+
+
+/*    Vins d'un producteur    */
+Route::get('producteurs', 'ProducteursController@selection');
+Route::post('producteurs', 'ProducteursController@afficherVins');

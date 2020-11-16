@@ -47,6 +47,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/middleware">Middleware</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/producteurs">Les vins d'un producteur</a>
+                        </li>
                     </ul>
                 </div>
             </div>
