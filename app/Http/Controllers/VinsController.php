@@ -38,6 +38,11 @@ class VinsController extends Controller
         return view('vins.show', compact('vin'));
     }
     
+
+    public function destroy(Vin $vin) {
+        $vin->delete();
+        return redirect('vins');
+    }    
     
      
 }
