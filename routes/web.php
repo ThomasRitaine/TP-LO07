@@ -30,3 +30,9 @@ Route::get('vins/create', 'VinsController@create');
 Route::post('vins', 'VinsController@store');
 Route::get('vins/{vin}', 'VinsController@show');
 Route::delete('vins/{vin}', 'VinsController@destroy');
+
+
+
+/*  Route du middleware     */
+
+Route::view('/middleware', 'middleware')->middleware('TP');
