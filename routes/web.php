@@ -22,3 +22,7 @@ Route::view('/','welcome');
 // le deuxième est ce qui doit être fait, ici appeler la méthode "index" du controlleur "VinsController"
 // Pour pouvoir utiliser le controlleur, il faut ajouter "use App\Http\Controllers\VinsController;" au début du fichier
 
+
+/*  Routes des vins     */
+
+Route::get('vins', 'VinsController@index');
