@@ -26,3 +26,4 @@ Route::view('/','welcome');
 /*  Routes des vins     */
 
 Route::get('vins', 'VinsController@index');
+Route::get('vins/create', 'VinsController@create');
