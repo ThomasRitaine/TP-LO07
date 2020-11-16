@@ -22,5 +22,11 @@ class VinsController extends Controller
         ]);
     }
     
+
+    public function store() {
+        $vin = Vin::create($this->validator());
+        return back();
+    }
+    
      
 }
