@@ -30,10 +30,10 @@ class VinsController extends Controller
 
     public function store() {
         $vin = Vin::create($this->validator());
-        return back();
+        return redirect('vins/'. $vin->id);
     }
 
-    
+
     public function show(Vin $vin) {
         return view('vins.show', compact('vin'));
     }
