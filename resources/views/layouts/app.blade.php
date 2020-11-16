@@ -41,6 +41,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/vins">Voir les vins</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/vins/create">Ajouter un vin</a>
+                        </li>
                     </ul>
                 </div>
             </div>
