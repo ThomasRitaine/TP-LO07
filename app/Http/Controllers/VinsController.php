@@ -32,6 +32,12 @@ class VinsController extends Controller
         $vin = Vin::create($this->validator());
         return back();
     }
+
+    
+    public function show(Vin $vin) {
+        return view('vins.show', compact('vin'));
+    }
+    
     
      
 }
