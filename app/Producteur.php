@@ -8,4 +8,10 @@ class Producteur extends Model
 {
     protected $table = 'producteur';
     protected $guarded = [];
+
+    public function vins()
+    {
+        return $this->belongsToMany(Vin::class);
+    }
+
 }

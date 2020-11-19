@@ -17,10 +17,8 @@ class ProducteursController extends Controller
     public function afficherVins(Request $request) {
         $producteur_id = $request->input('producteur_id');
 
-        $listeVins = DB::select(DB::raw('SELECT vin.id, vin.cru, vin.annee, vin.degre
-        FROM producteur, vin, recolte
-        WHERE vin.id = recolte.vin_id AND producteur.id = recolte.producteur_id
-        AND producteur.id = '. $producteur_id.';'));
+        $producteur = Producteur::findOrFail($producteur_id);
+        $listeVins = $producteur->vins;
 
         return view('vins.index', compact('listeVins'));
     }

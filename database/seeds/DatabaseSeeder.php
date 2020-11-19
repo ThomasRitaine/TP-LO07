@@ -24,5 +24,9 @@ class DatabaseSeeder extends Seeder
         $path = 'database\seeds\SQL_seeders\recoltes_seeder.sql';
         DB::unprepared(file_get_contents($path));
         $this->command->info('Recolte table seeded ! Au boulot maintenant !');
+
+        $path = 'database\seeds\SQL_seeders\producteur_vin_seeder.sql';
+        DB::unprepared(file_get_contents($path));
+        $this->command->info('Nous venons de remplir la table pivot producteur_vin, capitaine !');
     }
 }
